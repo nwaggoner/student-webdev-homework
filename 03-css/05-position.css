@@ -4,6 +4,17 @@
   --darkgolden: #8f6805;
 }
 
+
+.main {
+  display: flex;
+  justify-content: center; 
+  gap: 10px;
+  padding-top: 50px; 
+  padding-bottom: 70px; 
+  margin: 0 auto; 
+}
+
+
 .box {
   padding: 10px;
   color: var(--white);
@@ -11,16 +22,32 @@
 
 .static {
   background-color: var(--darkviolet);
+  width: 300px;
+  height: 400px;
+  position: static;
 }
 
 .relative {
   background-color: var(--purple);
+  width: 300px;
+  height: 400px;
+  position: relative;
 }
 
 .absolute {
   background-color: var(--maroon);
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .fixed {
   background-color: var(--darkgolden);
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
