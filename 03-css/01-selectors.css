@@ -11,11 +11,38 @@
 /* Use attribute selectors for the first part of the exercise */
 
 li[class] {
-  color: var(--red);
+  color: var(--royalblue);
+}
+
+li[class="dog"], li[class="hedgehog"] {
+  color: var(--darkmagenta); 
+}
+
+li[id="cat"]{
+  color: var(--teal); 
+}
+
+li[class="parrot"]{
+  color: var(--green); 
 }
 
 /* Use descendant, child, and sibling selectors for the second part */
 
 section li {
   color: var(--green);
+}
+
+
+.list-food ol li:nth-child(1) {
+  color: var(--green);
+}
+
+.list-food ol li:nth-child(2), 
+.list-food ol li:nth-child(4) {
+  color: var(--darkmagenta);
+}
+
+
+.list-food ol li:nth-child(3) {
+  color: var(--royalblue);
 }
