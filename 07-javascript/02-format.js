@@ -1,10 +1,15 @@
 const formatItems = (input) => {
-  // return a string of the concatenated numbers, separated by commas and with three digits after the decimal point
-
-  // for reference, see the MDN Number page:
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
-
-  return input;
+  // Format each number to 3 decimal places, then join with commas
+  return input
+    .map((num) => {
+      // Handle cases where input might not be a number
+      const number = Number(num);
+      // Check if it's a valid number
+      if (isNaN(number)) return "NaN";
+      // Format to exactly 3 decimal places
+      return number.toFixed(3);
+    })
+    .join(", ");
 };
 
 console.log(formatItems([1, 4, 17, 26, 41]));
